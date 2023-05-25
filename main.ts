@@ -3,7 +3,7 @@ function attack_1 (nr: number) {
         maqueen.writeLED(maqueen.LED.LEDRight, maqueen.LEDswitch.turnOn)
         maqueen.writeLED(maqueen.LED.LEDLeft, maqueen.LEDswitch.turnOn)
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
-        basic.pause(2000)
+        basic.pause(4000)
         maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, 255)
         basic.pause(200)
         maqueen.motorStop(maqueen.Motors.M1)
@@ -27,12 +27,7 @@ basic.forever(function () {
         maqueen.motorStop(maqueen.Motors.M1)
         basic.pause(1200)
         maqueen.motorStop(maqueen.Motors.All)
-    } else {
-        if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 20) {
-            attack1 = 0
-            for (let index = 0; index < 5; index++) {
-            	
-            }
-        }
+    } else if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 20) {
+        attack1 = 0
     }
 })
