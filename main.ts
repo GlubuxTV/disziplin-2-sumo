@@ -19,7 +19,7 @@ input.onButtonPressed(Button.A, function () {
     fehrnsicht = 0
     while (fehrnsicht == 0) {
         maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
-        if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 20) {
+        if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 40) {
             fehrnsicht = 1
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
             basic.pause(100)
