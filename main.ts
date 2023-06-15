@@ -22,15 +22,12 @@ input.onButtonPressed(Button.A, function () {
         if (maqueen.Ultrasonic(PingUnit.Centimeters) <= 20) {
             fehrnsicht = 1
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 30)
+            basic.pause(100)
             maqueen.motorStop(maqueen.Motors.All)
         }
     }
     maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 255)
 })
-// Tobias, deine Attack
-function Attack_2 (num: number) {
-	
-}
 let attack1 = 0
 let status = 0
 let fehrnsicht = 0
